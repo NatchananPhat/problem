@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+string pTu(int f,int c){
+    if(f < 50 && c < 50) return "Unfriend";
+    if(f < 50 && c > 50) return "Friend";
+    if(f >= 50 && f < 80 && c < 50) return "One-night-stand";
+    if(f >= 50 && f < 80 && c > 50) return "Friend";
+    if(f >= 80 && c < 50) return "One-night-stand";
+    if(f >= 80 && c > 50) return "Girlfriend";
+}
+
+int main (){
+    int face,character;
+    cin >> face >> character;
+    cout << pTu(face,character);
+}
