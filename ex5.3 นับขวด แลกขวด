@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int cheetah(int);
+
+int main(){
+    int money;
+    cin >> money;
+    cout << cheetah(money);
+}
+
+int cheetah(int m){
+    int sum = 0;
+    int N = m/10;
+    sum = N;
+    while(N/3 >= 1){
+        int change = N/3;
+        int left = N%3;
+        N = change + left;
+        sum = sum + change;
+    }
+    return sum;
+}
