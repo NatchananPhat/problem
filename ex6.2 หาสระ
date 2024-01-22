@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+char vowel(char a){
+    string vw = "AEIOUaeiou";
+    int l = vw.size();
+    int i = 0;
+    while(i < l){
+        if(a == vw[i]) return 'y';
+        i++;
+    }
+    return 'n';
+}
+
+int main (){
+    char a;
+    cin >> a;
+    cout << vowel(a);
+}
