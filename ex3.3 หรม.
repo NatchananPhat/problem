@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int greatDivisor(int r){
+    int x = r - 1;
+    while(r%x != 0){
+        x--;
+    }
+    return x;
+}
+
+int main(){
+    int rand;
+    cin >> rand;
+    cout << greatDivisor(rand);
+}
