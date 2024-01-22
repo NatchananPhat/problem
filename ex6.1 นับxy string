@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int stringxy(string z){
+    int l = z.size();
+    int i = 0,x = 0,y = 0;
+    while(i < l){
+        if(z[i] == 'X'){
+            x++;
+        }else{
+            y++;
+        }
+        i++;
+    }
+    
+    if(x > y) return 1;
+    if(x < y) return -1;
+    if(x == y) return 0;
+}
+
+int main (){
+    string xy;
+    cin >> xy;
+    cout << stringxy(xy);
+}
